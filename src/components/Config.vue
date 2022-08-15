@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useStore } from '@/store'
+import { useStore } from '../store'
 import { toRefs } from 'vue'
 import Stack from './Stack.vue'
 import Input from './Input.vue'

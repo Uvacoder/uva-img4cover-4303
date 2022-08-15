@@ -11,7 +11,6 @@ const emit = defineEmits<{
 
 function onInput(event: Event): void {
   const target = event.target as HTMLInputElement
-
   emit('update:modelValue', target.value)
 }
 </script>

@@ -3,10 +3,8 @@ import { ref } from 'vue'
 import Stack from './components/Stack.vue'
 import Preview from './components/Preview.vue'
 import Config from './components/Config.vue'
-import { useStore } from '@/store'
 import { toPng } from 'html-to-image'
 
-const { title, name, image } = useStore()
 const el = ref(null)
 
 function downloadImage() {

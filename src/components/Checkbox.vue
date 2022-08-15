@@ -11,6 +11,10 @@ const emit = defineEmits<{
 }>()
 
 const checked = ref(props.modelValue)
+
+function onInput(event: Event): void {
+  emit('update:modelValue', checked.value)
+}
 </script>
 
 <template>
@@ -18,7 +22,7 @@ const checked = ref(props.modelValue)
     <input
       class="checkbox__element"
       v-model="checked"
-      @change="ev => emit('update:modelValue', checked)"
+      @change="onInput"
       type="checkbox"
     />
     <span class="checkbox__label">{{ label }}</span>

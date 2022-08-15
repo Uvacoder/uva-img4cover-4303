@@ -7,17 +7,18 @@ defineProps<{
 const emit = defineEmits<{
   (e: 'update:modelValue', value: string): void
 }>()
+
+function onInput(event: Event): void {
+  const target = event.target as HTMLSelectElement
+  emit('update:modelValue', target.value)
+}
 </script>
 
 <template>
   <label class="select">
     <span class="select__label">{{ label }}</span>
     <div class="select__wrapper">
-      <select
-        class="select__element"
-        :value="modelValue"
-        @input="ev => emit('update:modelValue', ev.target.value)"
-      >
+      <select class="select__element" :value="modelValue" @input="onInput">
         <slot />
       </select>
       <svg

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useStore } from '@/store'
+import { useStore } from '../store'
 import { toRefs } from 'vue'
 
 const store = useStore()
@@ -10,7 +10,7 @@ const { title, author, theme, showLogo, showPattern } = toRefs(store)
   <div class="preview-wrapper">
     <div :class="`preview preview--${theme}`" v-auto-animate>
       <svg
-        v-if="showPattern"
+        v-show="showPattern"
         class="preview__bg"
         xmlns="http://www.w3.org/2000/svg"
         width="100%"
