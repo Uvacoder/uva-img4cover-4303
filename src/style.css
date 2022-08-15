@@ -1,0 +1,75 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --border-radius-sm: 0.25rem;
+  --border-radius: 0.5rem;
+  --border-radius-lg: 1rem;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+
+  /* Primary */
+  --primary-hue: 213deg;
+  --color-primary-50: hsl(var(--primary-hue) 100% 95%);
+  --color-primary-100: hsl(var(--primary-hue) 100% 90%);
+  --color-primary-200: hsl(var(--primary-hue) 100% 80%);
+  --color-primary-300: hsl(var(--primary-hue) 100% 70%);
+  --color-primary-400: hsl(var(--primary-hue) 100% 60%);
+  --color-primary-500: hsl(var(--primary-hue) 100% 50%);
+  --color-primary-600: hsl(var(--primary-hue) 100% 40%);
+  --color-primary-700: hsl(var(--primary-hue) 100% 30%);
+  --color-primary-800: hsl(var(--primary-hue) 100% 20%);
+  --color-primary-900: hsl(var(--primary-hue) 100% 10%);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  background-color: var(--color-primary-900);
+  border: none;
+  font-size: 1rem;
+  font: inherit;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  cursor: pointer;
+}
+
+#app {
+  width: max-content;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
