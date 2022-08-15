@@ -7,7 +7,7 @@ import { useStore } from './store'
 import { toPng } from 'html-to-image'
 
 const el = ref(null)
-const { title } = useStore()
+const store = useStore()
 
 const kebabCase = (value: string) =>
   value
@@ -24,7 +24,7 @@ function downloadImage() {
   })
     .then(dataUrl => {
       const link = document.createElement('a')
-      link.download = kebabCase(title)
+      link.download = kebabCase(store.title)
       link.href = dataUrl
       link.click()
     })
