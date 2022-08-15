@@ -3,9 +3,17 @@ import { ref } from 'vue'
 import Stack from './components/Stack.vue'
 import Preview from './components/Preview.vue'
 import Config from './components/Config.vue'
+import { useStore } from './store'
 import { toPng } from 'html-to-image'
 
 const el = ref(null)
+const { title } = useStore()
+
+const kebabCase = (value: string) =>
+  value
+    .replace(/([a-z])([A-Z])/g, '$1-$2')
+    .replace(/[\s_]+/g, '-')
+    .toLowerCase()
 
 function downloadImage() {
   const el = document.querySelector('.preview') as HTMLElement
@@ -16,7 +24,7 @@ function downloadImage() {
   })
     .then(dataUrl => {
       const link = document.createElement('a')
-      link.download = 'cover.png'
+      link.download = kebabCase(title)
       link.href = dataUrl
       link.click()
     })
