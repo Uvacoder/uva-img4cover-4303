@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import Stack from './components/Stack.vue'
-import Preview from './components/Preview.vue'
-import Config from './components/Config.vue'
 import { useStore } from './store'
 import { toPng } from 'html-to-image'
+
+import Stack from './components/Stack.vue'
+import Preview from './components/Preview.vue'
+import Button from './components/Button.vue'
+import Config from './components/Config.vue'
+import { DownloadIcon } from '@heroicons/vue/solid'
 
 const el = ref(null)
 const store = useStore()
@@ -36,13 +39,11 @@ function downloadImage() {
   <Stack gap="var(--spacing-lg)">
     <Preview />
     <Config />
-    <button @click="downloadImage">Download</button>
+    <Button @click="downloadImage">
+      Download
+      <template #right>
+        <DownloadIcon />
+      </template>
+    </Button>
   </Stack>
 </template>
-
-<style lang="scss">
-button {
-  color: var(--color-primary-50);
-  padding: var(--spacing-md);
-}
-</style>

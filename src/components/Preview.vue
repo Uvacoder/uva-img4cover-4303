@@ -101,6 +101,8 @@ const { title, author, theme, showLogo, showPattern } = toRefs(store)
   &__title {
     letter-spacing: -1.5px;
     margin: 0;
+    font-size: 3.2em;
+    line-height: 1.1;
   }
 
   &__author {

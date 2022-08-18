@@ -58,6 +58,10 @@ function onInput(event: Event): void {
     &::-ms-expand {
       display: none;
     }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary-300);
+    }
   }
 
   &__wrapper {

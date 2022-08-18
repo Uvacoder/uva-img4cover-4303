@@ -38,6 +38,10 @@ function onInput(event: Event): void {
     border-radius: var(--border-radius);
     border: 1px solid var(--color-primary-900);
     padding: var(--spacing-md);
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary-300);
+    }
   }
 }
 </style>
