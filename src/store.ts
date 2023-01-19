@@ -13,11 +13,11 @@ interface State {
 }
 
 export const useStore: () => State = defineStore('main', () => {
-	const title = ref<State['title']>('How to write better blog posts')
+	const title = ref<State['title']>('How to generate pics for my articles')
 	const showLogo = ref<State['showLogo']>(true)
 	const showPattern = ref<State['showPattern']>(true)
 	const author = reactive<State['author']>({ 
-		name: 'Ola Nordmann',
+		name: 'uvacoder',
 		image: ''
 	})
 	const theme = ref<State['theme']>('light')
